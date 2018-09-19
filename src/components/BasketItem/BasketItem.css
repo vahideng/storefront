@@ -1,0 +1,91 @@
+.center {
+    text-align: center;
+  }
+  
+  .card {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fbfbfb;
+    padding: 50px 20px 70px;
+    color: grey;
+    text-transform: uppercase;
+  }
+  
+  .product td {
+    white-space: nowrap;
+    width: 50%;
+  }
+  .product {
+    padding: 30px 0 50px !important;
+  }
+  
+  .title {
+    margin: auto;
+  }
+  
+  .Basket_Container {
+    width: 400px;
+    margin: 0px;
+  }
+  
+  .Basket_Item_Row {
+    margin: 0px;
+  }
+  
+  .Basket_Img_Container {
+    padding: 0px;
+    margin: 0px;
+    padding: 10px;
+  }
+  
+  .Basket_Info_Container {
+    padding: 6px 10px 0px 0px;
+    margin: 0px;
+  }
+  
+  .thumbnail {
+    /* display: inline-block; */
+    /* vertical-align: middle; */
+    /* margin-right: 10px; */
+    /* margin-left: 10px; */
+    /* max-height: 100px; */
+  
+    width: 100%;
+  }
+  .thumbnail img {
+    width: 100%;
+  }
+  
+  .detailsWrapper {
+    display: flex;
+  }
+  
+  .remove {
+    opacity: 0.7;
+    transition: 0.3s;
+    font-size: 20px;
+  }
+  
+  .product td {
+    vertical-align: middle;
+  }
+  
+  .tableFooter {
+    border: 1px solid #dddddd;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+    height: 125px;
+    margin-bottom: 20px;
+  }
+  
+  .pricing {
+    width: 50%;
+    float: right;
+  }
+  
+  .floatRight {
+    float: right;
+  }
+  

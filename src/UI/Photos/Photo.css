@@ -1,0 +1,62 @@
+.Container {
+  position: relative;
+  width: 100%;
+  margin: 10px;
+  margin-top: 20px;
+}
+.Image {
+  opacity: 1;
+  width: 80%;
+
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  height: 240px;
+}
+
+.Middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.Container:hover .Image {
+  opacity: 0.3;
+  
+}
+
+.Container:hover .Middle {
+  opacity: 1;
+  display: block;
+}
+
+.Text {
+  background-color: gray;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.Button {
+  font-size: 14px;
+  margin: 10px;
+  background-color: rgb(78, 68, 68);
+  color: rgb(228, 217, 217);
+  border: 1px solid black;
+}
+.Button:hover{
+  background-color: black;
+}
+.Button1 {
+  font-size: 14px;
+  margin: 10px;
+  background-color: rgb(78, 68, 68);
+  color: rgb(228, 217, 217);
+  border: 1px solid black;
+}
+.Button1:hover{
+  background-color: black;
+}

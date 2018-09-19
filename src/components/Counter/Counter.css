@@ -1,0 +1,38 @@
+
+.Counter {
+    /* display: inline-block; */
+    float:right;
+  }
+  
+  .Amount {
+    width: 50px;
+    height: 55px;
+    background: #d6d6d6;
+    display: inline-block;
+    margin-right: 3px;
+    line-height: 55px;
+    color: grey;
+    text-align: center;
+  }
+  
+  .BtnWrapper {
+    width: 25px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .CounterBtn {
+    width: 25px;
+    height: 26px;
+    background: #bdbdbd;
+    display: block;
+  
+    line-height: 26px;
+    font-size: 11px;
+    color: grey;
+    transition: 0.3s;
+    text-align: center;
+    margin: 1px;
+  }
+  .CounterBtn:hover {
+      cursor: pointer;
+  }

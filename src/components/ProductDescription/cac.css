@@ -1,0 +1,90 @@
+/* import React from 'react';
+import { Grid, Row, Col, Button } from 'react-bootstrap';
+import classes from './ProductDescription.css';
+import Counter from '../Counter/Counter';
+const productDescription = props => (
+  <Grid>
+    <Row className="show-grid">
+      <Col xs={12} md={6} lg={6}>
+        <img
+          src={props.imageSource}
+          responsive="true"
+          alt="sdds"
+          style={{ width: '480px', maxWidth: '100%' }}
+        />
+      </Col>
+
+      <Col xs={12} md={6} lg={6} style={{ fontSize: '1.6rem' }}>
+        <p style={{ color: 'gray' }}> {props.brand} </p>
+        <p style={{ fontWeight: 'bolder' }}>{props.title}</p>
+        <p style={{ color: 'gray' }}>${props.price}</p>
+        <p> {props.description} </p>
+        <hr />
+        <div className={classes.Parent}>
+          <Row>
+          <Col xs={6} md={4} lg={6} style={{ fontSize: '1.6rem' }}>
+            <Counter
+              count={props.count}
+              increaseCount={props.increaseCount}
+              decreaseCount={props.decreaseCount}
+            />
+         
+          <div className={classes.ButtomCounter}>
+            <Button className={classes.Button} onClick={props.add}>
+              ADD TO CART
+            </Button>
+           
+          </div>
+          </Col>
+          </Row>
+          </div>
+        
+      </Col>
+    </Row>
+  </Grid>
+);
+
+export default productDescription; */
+
+
+/* ////
+
+
+
+render() {
+  let myCartInfo = <MenuItem> Empty </MenuItem>;
+  if (this.state.myCart) {
+    myCartInfo = this.state.myCart.map((cart, index) => {
+      return (
+        <Table striped bordered condensed hover>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Product</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <MenuItem key={index}>
+                  <td>
+                    <img
+                      src={image[cart.productIndex]}
+                      alt="product"
+                      style={{ width: '20%' }}
+                      className={classes.Thumbnail}
+                    />
+                    Title: {cart.productTitle}
+                  </td>
+                  <td>
+                    <div>Count: {cart.productCount}</div>
+                  </td>
+                  <div>TotalPrice: {cart.totalPrice}</div>
+                </MenuItem>
+              </td>
+            </tr>
+          </tbody>
+        </Table>
+      );
+    });
+  } */

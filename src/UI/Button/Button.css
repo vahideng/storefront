@@ -1,0 +1,43 @@
+.Button {
+
+ width: 160px;
+ box-sizing: border-box;
+ 
+
+ max-width: 100%;
+ height: 56px;;
+}
+
+.Button:hover {
+  cursor: pointer;
+}
+
+
+.Checkout {
+
+    float: right;
+
+}
+.Checkout {
+    margin-right: 10px;
+    color: whitesmoke;
+    background-color: #242020;
+    float: left;
+
+}
+.Checkout:hover {
+    cursor: pointer;
+    background-color: gray
+}
+
+.ViewCart{
+    margin-left: 10px;
+    float: right;
+    color: black;
+    background-color: transparent;
+}
+.ViewCart:hover {
+
+    cursor: pointer;
+    background-color: rgb(207, 207, 201);
+}

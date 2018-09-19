@@ -1,0 +1,11 @@
+.Layout {
+  text-align: center;
+  width: 100%;
+}
+
+.Photo {
+  text-align: center;
+  width: 81%;
+  margin: auto;
+  margin-top: 30px;
+}

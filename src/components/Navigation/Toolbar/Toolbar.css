@@ -1,0 +1,47 @@
+.Toolbar {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+.Toolbar nav {
+  width: 100%;
+  background-color: transparent;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 90;
+  font-weight: 100;
+}
+
+.platesHeader {
+  position: relative;
+  height: 250px;
+  box-sizing: border-box;
+  width: 94%;
+  text-align: center;
+}
+
+.Plate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid white;
+  margin: auto;
+  padding: auto;
+  color: white;
+  width: 40%;
+  height: 140%;
+  text-align: center;
+  background-color: rgb(77, 76, 76);
+  padding-top: 220px;
+
+  font-size: 1.8rem;
+  
+}
+.Paragraph{
+   
+  font-size: 0.8rem;
+}

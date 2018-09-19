@@ -1,0 +1,31 @@
+.container {
+  margin-top: 10%;
+}
+.Parent {
+    display: flex;
+    align-items: center;
+  }
+.Counter {
+    /* width: 200px;
+    margin-right: 34px; */
+    /* Just so it's visible */
+  }
+.ButtomCounter {
+    flex: 1;
+    
+    /* Grow to rest of container */
+    
+    /* Just so it's visible */
+  }
+  
+.Button {
+   margin-left: 0px;
+   background: rgb(44, 42, 42);
+   color: azure;
+   
+}
+.Button:hover{
+    cursor: pointer;
+    color: grey-light;  
+}
+

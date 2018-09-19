@@ -1,0 +1,427 @@
+/* 
+.container {
+ 
+  float: left;
+  display: table;
+  box-sizing: border-box;
+  width: 26%;
+  max-width: 29%;
+
+  text-align: center;
+*/
+/* 
+.Overlay {
+  position: absolute;
+  width: 100%;
+  height: 202px;
+  margin: 20px;
+  top: 0%;
+  left: 0%;
+  display: block;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+  z-index: 1;
+}
+.Container:hover .Overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.Container img {
+  width: 100%;
+  height: 202px;
+  margin: 20px;
+}
+
+.Button {
+  
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  height: 14%;
+  width: 50%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.Button1 {
+ 
+  position: absolute;
+  top: 36%;
+  left: 35%;
+  height: 14%;
+  width: 50%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+
+}
+
+
+.Container:hover .Button {
+  opacity: 1;
+  z-index: 2;
+}
+.Container:hover .Button1{
+  opacity: 1;
+  z-index: 2;
+}
+/* .Column img {
+  display: inline-flex;
+  width: 96%;
+  height: 180px;
+}
+
+.Column img:hover {
+
+opacity: .2;
+}
+
+.Button {
+  opacity: .0;
+  display: inline-block;
+  width: 40%;
+  height: 180px;
+  position: absolute;
+  
+}
+.Button:hover {
+  
+  
+  height:33%;
+  opacity: 1;
+} */
+
+/* .container {
+  position: relative;
+  margin-top: 50px;
+  width: 500px;
+  height: 300px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+
+img {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 0;
+}
+
+.title {
+  position: absolute;
+  width: 500px;
+  left: 0;
+  top: 120px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  z-index: 1;
+  transition: top .5s ease;
+}
+
+.container:hover .title {
+  top: 90px;
+}
+
+.button {
+  position: absolute;
+  width: 500px;
+  left:0;
+  top: 180px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.button a {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.container:hover .button {
+  opacity: 1;
+} */ 
+
+
+/* import React, { Component } from 'react';
+import classes from './Photo.css';
+import {Col, Row,Grid} from 'react-bootstrap'
+import { connect } from 'react-redux';
+
+class photo extends Component {
+  render() {
+    return (
+      <Grid>
+         <Row className="show-grid">
+         <Col xs={12} md={3} lg={2}>
+      <div>
+        <div className={classes.Container}>
+          <img src={this.props.imageSource} alt={this.props.imageAlt} style={{width:'100%'}} />
+
+
+          <button onClick={this.props.clicked} className={classes.Button}>
+            VIEW DETAILS
+          </button>
+          <button className={classes.Button1}> ADD TO CART </button>
+          <p style={{ color: 'gray' }}>{this.props.brand}</p>
+          <p>{this.props.title}</p>
+          <p style={{ color: 'gray' }}>${this.props.price}</p>
+        </div>
+      </div>
+      </Col>
+      </Row>
+      </Grid>
+    );
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    overMouse22: state.mouseOver
+  };
+};
+
+export default connect(mapStateToProps)(photo); */
+
+
+
+/* ///////
+
+
+.container {
+  position: relative;
+  margin: 20px;
+  float: left;
+  display: table;
+  box-sizing: border-box;
+  width: 26%;
+  max-width: 29%;
+
+  text-align: center;
+} */
+/* 
+.Overlay {
+  position: absolute;
+  width: 100%;
+  height: 202px;
+  margin: 20px;
+  top: 0%;
+  left: 0%;
+  display: block;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+  z-index: 1;
+}
+.Container:hover .Overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.Container img {
+  width: 100%;
+  height: 202px;
+  margin: 20px;
+}
+
+.Button {
+  
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  height: 14%;
+  width: 50%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.Button1 {
+ 
+  position: absolute;
+  top: 36%;
+  left: 35%;
+  height: 14%;
+  width: 50%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+
+}
+
+
+.Container:hover .Button {
+  opacity: 1;
+  z-index: 2;
+}
+.Container:hover .Button1{
+  opacity: 1;
+  z-index: 2;
+}
+/* .Column img {
+  display: inline-flex;
+  width: 96%;
+  height: 180px;
+}
+
+.Column img:hover {
+
+opacity: .2;
+}
+
+.Button {
+  opacity: .0;
+  display: inline-block;
+  width: 40%;
+  height: 180px;
+  position: absolute;
+  
+}
+.Button:hover {
+  
+  
+  height:33%;
+  opacity: 1;
+} */
+
+/* .container {
+  position: relative;
+  margin-top: 50px;
+  width: 500px;
+  height: 300px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+
+img {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 0;
+}
+
+.title {
+  position: absolute;
+  width: 500px;
+  left: 0;
+  top: 120px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  z-index: 1;
+  transition: top .5s ease;
+}
+
+.container:hover .title {
+  top: 90px;
+}
+
+.button {
+  position: absolute;
+  width: 500px;
+  left:0;
+  top: 180px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.button a {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.container:hover .button {
+  opacity: 1;
+} */ 
+
+
+
+/* 
+////////
+import React, { Component } from 'react';
+import classes from './Photo.css';
+import { Col, Row, Overlay } from 'react-bootstrap';
+import { connect } from 'react-redux';
+
+class photo extends Component {
+  render() {
+    return (
+    <Col xs={12} md={4} lg={4}>
+    <Row>
+      <Col md={12} >
+      <div className={classes.Container}>
+        <div className={classes.imageWrapper}>
+          <img src={this.props.imageSource} alt={this.props.imageAlt} />
+          <p style={{ color: 'gray' }}>{this.props.brand}</p>
+        <p>{this.props.title}</p>
+        <p style={{ color: 'gray' }}>${this.props.price}</p>
+        </div>
+        <div className={classes.Overlay} >
+        <Col md={6}>
+        <button onClick={this.props.clicked} className={classes.Button}>
+          VIEW DETAILS
+        </button>
+        <button className={classes.Button1}> ADD TO CART </button>
+        </Col>
+      </div>
+      </div>
+      </Col>
+      </Row>
+    </Col>
+    );
+  }
+}
+
+
+const mapStateToProps = state => {
+  return {};
+};
+
+export default connect(mapStateToProps)(photo);
+//  {/* <Col xs={12} md={3} lg={2}> */  
