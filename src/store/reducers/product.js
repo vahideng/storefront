@@ -13,7 +13,7 @@ const reducer = (state = initialState, action) => {
         productCount: action.productCount,
         productBrand: action.productBrand,
         productPrice: action.productPrice,
-        totalPrice : action.productTotalPrice
+        totalPrice: action.productTotalPrice
       };
 
       let newItem = true;
@@ -29,13 +29,44 @@ const reducer = (state = initialState, action) => {
         carts: newItem ? state.carts.concat(updatedCarts) : carts
       };
 
-      case actionTypes.REMOVE_PRODUCT :
-    updatedCarts= state.carts.filter(product=>product.productIndex !== action.productIndex)
+    case actionTypes.REMOVE_PRODUCT:
+      updatedCarts = state.carts.filter(
+        product => product.productIndex !== action.productIndex
+      );
 
       return {
         ...state,
         carts: updatedCarts
-      }
+      };
+
+    case actionTypes.INCREMENT_COUNTER:
+      
+      let updatedCartsCount = state.carts.map(product => {
+        if (product.productIndex === action.index) {
+          return {...product, productCount: action.count, totalPrice : action.totalPrice }
+        }
+        return product;
+      });
+
+      return {
+        ...state,
+        carts : updatedCartsCount
+        
+      };
+      case actionTypes.DECREMENT_COUNTER:
+      
+      let updatedCartsCountRenove = state.carts.map(product => {
+        if (product.productIndex === action.index) {
+          return {...product, productCount: action.count, totalPrice : action.totalPrice }
+        }
+        return product;
+      });
+
+      return {
+        ...state,
+        carts : updatedCartsCountRenove
+        
+      };
 
     default:
       return {

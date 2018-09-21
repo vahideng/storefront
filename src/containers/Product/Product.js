@@ -52,7 +52,7 @@ class product extends Component {
     this.setState({ productCount: this.props.productCount[counter] });
   };
 
-  addProductToRedux = (productTitle, productIndex, price, productBrand) => {
+    addProductToRedux = (productTitle, productIndex, price, productBrand) => {
     const productCount = this.state.counter;
     const productTotalPrice = productCount * price;
     console.log(price, 'price');

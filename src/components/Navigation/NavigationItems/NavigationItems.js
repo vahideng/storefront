@@ -13,7 +13,8 @@ import { withRouter } from 'react-router-dom';
 class NavigationItems extends Component {
   state = {
     myCart: null,
-    totalPrice: 0
+    totalPrice: 0,
+    showCart : true
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -37,7 +38,7 @@ class NavigationItems extends Component {
 
   viewCartPage = () => {
 this.props.history.push('/viewcart');
-    
+    this.setState({showCart: false})
     
   }
 
@@ -75,7 +76,6 @@ this.props.history.push('/viewcart');
                 style={{ cursor: 'pointer' }}
                 onClick={() => this.removeProduct(cart.productIndex)}
               >
-                {' '}
                 X
               </div>
             </Col>
@@ -124,7 +124,8 @@ this.props.history.push('/viewcart');
               <MenuItem eventKey={4.3}>Separated link</MenuItem>
             </NavDropdown>
           </Nav>
-          <Nav pullRight style={{ fontWeight: '600' }}>
+          
+          {this.state.showCart ? <Nav pullRight style={{ fontWeight: '600' }}>
             <NavDropdown eventKey={6} title="MY CART" id={6.1}>
               <Row className={classes.Basket_Container}>
                 {myCartInfo}
@@ -159,7 +160,8 @@ this.props.history.push('/viewcart');
                 </Row>
               </Row>
             </NavDropdown>
-          </Nav>
+          </Nav> : null }
+         
         </Navbar.Collapse>
       </Navbar>
     );

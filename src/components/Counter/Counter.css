@@ -36,3 +36,7 @@
   .CounterBtn:hover {
       cursor: pointer;
   }
+
+  .viewCartCounter {
+    float: none;
+  }
