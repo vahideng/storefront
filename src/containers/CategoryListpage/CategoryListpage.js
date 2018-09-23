@@ -3,13 +3,14 @@ import images from '../../components/Images/Images';
 import { connect } from 'react-redux';
 import Photo from '../../UI/Photos/Photo';
 import * as actions from '../../store/actions/category';
-import { withRouter } from 'react-router-dom';
+import { withRouter,Link,Redirect } from 'react-router-dom';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import { Row, Grid } from 'react-bootstrap';
 
 class CategoryListpage extends Component {
   state = {
-    productNumber: null
+    viewDetailClicked: false,
+    productIndex: null
   };
 
   componentWillUpdate() {
@@ -18,9 +19,14 @@ class CategoryListpage extends Component {
   }
 
   viewDetails = index => {
-    this.props.history.push('/product');
-    this.setState({ productNumber: index });
-    this.props.onProductNumber(index);
+    this.setState({ viewDetailClicked: true, productIndex:index });
+    
+  
+    
+
+   
+    
+ this.props.onProductNumber(index);
   };
 
   render() {
@@ -29,7 +35,8 @@ class CategoryListpage extends Component {
       console.log(product,"product in category");
       
       return (
-        <Photo
+       
+        <Photo 
           key={index}
           title={product.title}
           brand={product.brand}
@@ -37,8 +44,10 @@ class CategoryListpage extends Component {
           description={product.description}
           imageSource={images[index]}
           imageAlt={product.title}
-          clicked={() => this.viewDetails(index)}
+          clicked={()=>this.viewDetails(index)}
+          
         />
+     
       );
     });
 
@@ -46,7 +55,8 @@ class CategoryListpage extends Component {
       <div>
         <Toolbar />
         <Grid>
-          <Row> {productCategory} </Row>{' '}
+          <Row> {productCategory} </Row>
+           {this.state.viewDetailClicked ? <Redirect to={'./'+this.state.productIndex}/> : null}
         </Grid>
       </div>
     );

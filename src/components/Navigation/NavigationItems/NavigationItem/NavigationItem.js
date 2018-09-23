@@ -9,7 +9,7 @@ import {
 
 const navigationItem = props => (
   <Nav className={classes.Nav}>
-    <LinkContainer to={props.link}>
+    <LinkContainer  exact to={props.link}>
       <NavItem eventKey={props.key}>{props.children}</NavItem>
     </LinkContainer>
   </Nav>

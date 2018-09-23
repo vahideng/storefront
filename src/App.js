@@ -22,8 +22,9 @@ class App extends Component {
   render() {
     const routes = (
       <Switch>
-        <Route path="/product" component={productDisctiption} />
-        <Route path="/" exact component={CategoryListPage} />
+         <Route path="/" exact component={CategoryListPage} />
+        <Route path="/:id" component={productDisctiption} />
+       
         <Route path="/viewcart" component={CartPage} />
       </Switch>
     );

@@ -29,7 +29,7 @@ class NavigationItems extends Component {
       return (totalPrice += pro.totalPrice);
     });
     this.setState({ totalPrice: totalPrice });
-    console.log(totalPrice, 'totalproceeee');
+    console.log(totalPrice, 'totalPrice');
   }
   removeProduct(index) {
     console.log(index, 'INDEXXXXXX');

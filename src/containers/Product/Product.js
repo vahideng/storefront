@@ -8,13 +8,10 @@ import AUX from '../../hoc/Aux/Aux';
 
 class product extends Component {
   state = {
-    
     counter: 0,
-    
+
     popUpShow: false
   };
-
-
 
   handleUpdateMessage = productUpdated => {
     //to show product added message to user
@@ -79,23 +76,23 @@ class product extends Component {
   render() {
     // console.log(this.state.myCart, 'mycart');
     // console.log(this.state.popUpShow, 'popUpShow');
-    console.log(this.props, this.state);
+    console.log(this.props,"product props ******");
 
     let isProductAvailable = 'product is not loaded';
-    if (this.props.product[this.props.productIndex]) {
+    if (this.props.product[this.props.match.params.id]) {
       isProductAvailable = (
         <ProductDesctiption
-          title={this.props.product[this.props.productIndex].title}
-          description={this.props.product[this.props.productIndex].description}
-          imageSource={image[this.props.productIndex]}
-          brand={this.props.product[this.props.productIndex].brand}
-          price={this.props.product[this.props.productIndex].price}
+          title={this.props.product[this.props.match.params.id].title}
+          description={this.props.product[this.props.match.params.id].description}
+          imageSource={image[this.props.match.params.id]}
+          brand={this.props.product[this.props.match.params.id].brand}
+          price={this.props.product[this.props.match.params.id].price}
           add={() =>
             this.addProductToRedux(
-              this.props.product[this.props.productIndex].title,
+              this.props.product[this.props.match.params.id].title,
               this.props.productIndex,
-              this.props.product[this.props.productIndex].price,
-              this.props.product[this.props.productIndex].brand
+              this.props.product[this.props.match.params.id].price,
+              this.props.product[this.props.match.params.id].brand
             )
           }
           increaseCount={this.increaserProductPayload}
@@ -103,8 +100,8 @@ class product extends Component {
           decreaseCount={this.decreaseProductPayload}
           productCount={() =>
             this.setProductCountFromRedux(
-              this.props.product[this.props.productIndex].title,
-              this.props.productIndex
+              this.props.product[this.props.match.params.id].title,
+              this.props.match.params.id
             )
           }
         />

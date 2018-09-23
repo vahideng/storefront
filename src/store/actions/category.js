@@ -47,21 +47,20 @@ export const addProducts = name => {
   };
 };
 
-export const incrementCounter = (index,count,totalPrice) => {
+export const incrementCounter = (index, count, totalPrice) => {
   return {
     type: actionTypes.INCREMENT_COUNTER,
     index: index,
     count: count,
-    totalPrice : totalPrice
-   
+    totalPrice: totalPrice
   };
 };
 
-export const decrementCounter = (index,count,totalPrice) => {
+export const decrementCounter = (index, count, totalPrice) => {
   return {
     type: actionTypes.DECREMENT_COUNTER,
     index: index,
     count: count,
-    totalPrice : totalPrice
+    totalPrice: totalPrice
   };
 };

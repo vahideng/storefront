@@ -20,6 +20,9 @@ class CartPage extends Component {
       this.calculateTotalPrice();
     }
   }
+  componentWillMount() {
+    this.calculateTotalPrice();
+  }
 
   deleteProduct = index => {
     this.props.onRemoveProduct(index);
@@ -125,6 +128,8 @@ class CartPage extends Component {
     });
 
     let totalPrice = <div style={{color: 'gray'}}>${this.state.totalPrice.toFixed(2)} </div>;
+    console.log("inja");
+    
 
     let totalPriceCad = <div>${this.state.totalPrice.toFixed(2)} CAD </div>;
 
