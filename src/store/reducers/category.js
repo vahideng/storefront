@@ -6,14 +6,6 @@ const initialState = {
   productNumber: null,
 };
 
-// const readInit = (state , action) => {
-//   return [
-//     ...state,
-//     {
-//       product: state.proudct.concat(action.product)
-//     }
-//   ];
-// };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

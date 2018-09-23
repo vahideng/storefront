@@ -125,7 +125,7 @@ this.props.history.push('/viewcart');
             </NavDropdown>
           </Nav>
           
-          {this.state.showCart ? <Nav pullRight style={{ fontWeight: '600' }}>
+          {<Nav pullRight style={{ fontWeight: '600' }}>
             <NavDropdown eventKey={6} title="MY CART" id={6.1}>
               <Row className={classes.Basket_Container}>
                 {myCartInfo}
@@ -160,7 +160,7 @@ this.props.history.push('/viewcart');
                 </Row>
               </Row>
             </NavDropdown>
-          </Nav> : null }
+          </Nav> }
          
         </Navbar.Collapse>
       </Navbar>

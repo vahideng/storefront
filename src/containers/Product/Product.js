@@ -8,51 +8,49 @@ import AUX from '../../hoc/Aux/Aux';
 
 class product extends Component {
   state = {
-    product: [],
+    
     counter: 0,
-    myCart: null,
+    
     popUpShow: false
   };
 
-  componentWillMount() {
-    const products = this.props.products; //loading products from redux
-    const productIndex = this.props.productNumber; // fetching product index from redux
-    this.setState({
-      product: products,
-      productIndex: productIndex
-    });
-  }
-  componentDidMount() {
-    if (this.props.cart[0]) {
-      this.props.cart.map(product => {
-        if (product.productIndex === this.props.productIndex) {
-          this.setState({ counter: product.productCount });
-          console.log(product.productCount, 'prrrrrr');
-        } else {
-          console.log(product.productCount, 'xxxxxaxaxaprrrrrr');
-        }
-      });
-    }
-  }
 
-  componentDidUpdate(prevProps, prevState, nextProps, nextState) {
-    if (this.props.cart !== prevProps.cart) {
-      this.setState({ myCart: this.props.cart });
-    }
 
-    if (this.state.popUpShow) {
+  handleUpdateMessage = productUpdated => {
+    //to show product added message to user
+
+    if (productUpdated) {
       this.setPopupOff = setTimeout(() => {
         this.setState(() => ({ popUpShow: false }));
       }, 1000);
+
+      return (
+        <div
+          style={{
+            textAlign: 'center',
+            transition: '0.5s ease',
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            paddingTop: '40px',
+            width: '200px',
+            backgroundColor: 'gray',
+            color: 'white',
+            height: '90px'
+          }}
+        >
+          Product Added To Cart
+        </div>
+      );
     }
-  }
+  };
 
   setProductCountFromRedux = counter => {
     console.log(this.props.productCount[counter], 'counter');
     this.setState({ productCount: this.props.productCount[counter] });
   };
 
-    addProductToRedux = (productTitle, productIndex, price, productBrand) => {
+  addProductToRedux = (productTitle, productIndex, price, productBrand) => {
     const productCount = this.state.counter;
     const productTotalPrice = productCount * price;
     console.log(price, 'price');
@@ -79,8 +77,10 @@ class product extends Component {
   };
 
   render() {
-    console.log(this.state.myCart, 'mycart');
-    console.log(this.state.popUpShow, 'popUpShow');
+    // console.log(this.state.myCart, 'mycart');
+    // console.log(this.state.popUpShow, 'popUpShow');
+    console.log(this.props, this.state);
+
     let isProductAvailable = 'product is not loaded';
     if (this.props.product[this.props.productIndex]) {
       isProductAvailable = (
@@ -113,24 +113,8 @@ class product extends Component {
     return (
       <AUX>
         <div style={{ marginTop: '10%' }}>{isProductAvailable}</div>
-       
-         
-          {this.state.popUpShow ?  <div
-          style={{
-            textAlign:'center',
-            transition: '0.5s ease',
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-           paddingTop:'40px',
-            width: '200px',
-            backgroundColor: 'gray',
-            color: 'white',
-            height: '90px'
-          }} >
-         Product added to cart 
-          </div> : null}
-       
+
+        {this.handleUpdateMessage(this.state.popUpShow)}
       </AUX>
     );
   }
@@ -139,7 +123,8 @@ const mapStateToProps = state => {
   return {
     product: state.categoryReducer.product,
     productIndex: state.categoryReducer.productNumber,
-    cart: state.productReducer.carts
+    cart: state.productReducer.carts,
+    productUpdated: state.productReducer.productUpdated
   };
 };
 

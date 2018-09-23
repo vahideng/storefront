@@ -20,7 +20,7 @@ const basketItem = props =>(
       {props.sign}{props.productCount}
     </div>
     
-    <div> { props.productBrand} </div>
+    <div style={{color: 'gray'}} > { props.productBrand} </div>
    
     <div style={{ verticalAlign: 'middle' }}>
       {props.dollarSign} {props.productPrice}
