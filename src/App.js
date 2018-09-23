@@ -22,10 +22,10 @@ class App extends Component {
   render() {
     const routes = (
       <Switch>
-         <Route path="/" exact component={CategoryListPage} />
-        <Route path="/:id" component={productDisctiption} />
-       
+        
+        <Route path="/" exact component={CategoryListPage} />
         <Route path="/viewcart" component={CartPage} />
+        <Route path="/:id" component={productDisctiption} />
       </Switch>
     );
     return (

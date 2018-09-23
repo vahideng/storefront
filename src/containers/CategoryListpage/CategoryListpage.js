@@ -26,7 +26,7 @@ class CategoryListpage extends Component {
 
    
     
- this.props.onProductNumber(index);
+    this.props.onProductNumber(index);
   };
 
   render() {
@@ -56,7 +56,7 @@ class CategoryListpage extends Component {
         <Toolbar />
         <Grid>
           <Row> {productCategory} </Row>
-           {this.state.viewDetailClicked ? <Redirect to={'./'+this.state.productIndex}/> : null}
+           {this.state.viewDetailClicked ? <Redirect to={'/'+this.state.productIndex}/> : null}
         </Grid>
       </div>
     );
